@@ -1,15 +1,9 @@
 package leetcode
 
-import java.nio.CharBuffer
-import java.nio.charset.Charset
-import java.util.Stack
-import javax.swing.text.AttributeSet.CharacterAttribute
-
-class ValidParentheses {
+import java.util.*
 
     fun checkParentheses(s: String) : Boolean {
-
-        var stack = Stack<String>()
+        val stack = Stack<String>()
         s.forEach {
             when(it.toString()) {
                 "(" -> stack.push(")")
@@ -24,15 +18,27 @@ class ValidParentheses {
         }
         return stack.isEmpty()
     }
+
+fun validParentheses(s: String) : Boolean {
+    val stack = Stack<String>()
+    s.forEach {
+        when(it.toString()) {
+            "(" -> stack.push(")")
+            "{" -> stack.push("}")
+            "[" -> stack.push("]")
+            else -> {
+                if(stack.isEmpty() || stack.pop() != it.toString()) {
+                    return false
+                }
+            }
+        }
+    }
+
+    return stack.isEmpty()
 }
 
 fun main() {
-
     val s1 = "(){}[]"
-    val s2 = "()"
-    var s3 = "(]"
-
-    val vp = ValidParentheses()
-    val result = vp.checkParentheses(s3)
+    val result = checkParentheses(s1)
     println(result)
 }

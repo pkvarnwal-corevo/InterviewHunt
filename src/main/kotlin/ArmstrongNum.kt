@@ -15,14 +15,11 @@ fun checkArmstrong() {
     if (originalNum == temp) println("$originalNum is Armstrong number")
     else println("$originalNum is not Armstrong number")
 }
-
 private fun calPow(i: Int, size: Int): Int {
     var result = 1
     for (j in 1..size) result *= i
-
     return result
 }
-
 fun main() {
     checkArmstrong()
 }
