@@ -1,12 +1,12 @@
 package leetcode
 
-fun printPairs(listOf: List<Int>, listOf1: List<Int>, x: Int): List<Pair<Int, Int>> {
+fun printPairs(listOf1: List<Int>, listOf2: List<Int>, x: Int): List<Pair<Int, Int>> {
     val result: MutableList<Pair<Int, Int>> = mutableListOf()
-    for (i in listOf.indices) {
+    for (i in listOf1.indices) {
 
-        for (j in listOf1.indices) {
-            if (listOf[i] + listOf1[j] == x) {
-                result.add(Pair(listOf[i], listOf1[i]))
+        for (j in listOf2.indices) {
+            if (listOf1[i] + listOf2[j] == x) {
+                result.add(Pair(listOf1[i], listOf2[i]))
             }
         }
     }

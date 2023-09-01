@@ -1,5 +1,8 @@
 import java.util.Random
 
+private var i = 0
+fun getSquared() = (i * i).also { i++ }
+
 fun funLet() {
     var name: String? = null
     name = "Prinsu"
