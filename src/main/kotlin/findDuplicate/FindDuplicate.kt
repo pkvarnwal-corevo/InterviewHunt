@@ -19,7 +19,7 @@ class FindDuplicate {
         val map = HashMap<Int, Int>()
         for(i in arr) {
             if (map.containsKey(i)) {
-                map.put(i, map.get(i)!! + 1)
+                  map.put(i, map.get(i)!! + 1)
             } else map.put(i, 1)
         }
     }

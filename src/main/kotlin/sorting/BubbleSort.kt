@@ -2,13 +2,13 @@ package sorting
 
 class BubbleSort {
 
-    fun sort(arr: Array<Int>) {
+    fun sort(arr: IntArray) {
         var swap = true
 
         while (swap) {
             swap = false
 
-            for(i in 0..<arr.size - 1) {
+            for(i in 0 until  arr.size - 1) {
                 if (arr[i] > arr[i+1]) {
                     val temp = arr[i]
                     arr[i] = arr[i+1]
@@ -23,7 +23,7 @@ class BubbleSort {
 }
 
 fun main() {
-    val arr = arrayOf(7, 3, 4, 1, 5, 2)
+    val arr = intArrayOf(7, 3, 4, 1, 5, 2)
     val bs = BubbleSort()
     bs.sort(arr)
 }

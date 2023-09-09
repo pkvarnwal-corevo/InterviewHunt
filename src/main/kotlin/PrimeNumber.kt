@@ -2,7 +2,7 @@ class PrimeNumber {
 
     fun checkPrime() {
         var isPrime = false
-        val primeNumber = 15
+        val primeNumber = 13
 
         for(i in 2..primeNumber/2) {
             if (primeNumber % i == 0) {

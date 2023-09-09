@@ -7,9 +7,7 @@ fun main() {
     if (rating != null && rating >= 0.0f && rating <= 5.0f) {
         println("Rating: $rating")
         printStars(rating)
-    } else {
-        println("Invalid rating. Please enter a number between 0.0 and 5.0.")
-    }
+    } else println("Invalid rating. Please enter a number between 0.0 and 5.0.")
 }
 
 fun printStars(rating: Float) {
